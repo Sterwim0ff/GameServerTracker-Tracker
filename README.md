@@ -24,7 +24,7 @@ This API was inspired by the Lametric Clock app project : [GameServerTracker-Lam
 
 #### Clone project
 ```bash
-$ git clone https://github.com/BliTz037/GameServerTracker-Tracker.git
+$ git clone https://github.com/Sterwim0ff/GameServerTracker-Tracker.git
 $ cd GameServerTracker-Tracker/
 ```
 
