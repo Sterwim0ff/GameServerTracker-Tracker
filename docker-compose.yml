@@ -11,21 +11,9 @@ services:
       - ./grafana-provisioning/:/etc/grafana/provisioning
     env_file:
       - .env
-  postgres:
-    image: postgres
-    restart: always
-    networks:
-      - gst-tracker-network
-    ports:
-      - '5432:5432'
-    env_file:
-      - .env
-    volumes:
-      - gst-db:/var/lib/postgresql/data
 
 networks:
   gst-tracker-network:
 
 volumes:
   grafana-storage:
-  gst-db:

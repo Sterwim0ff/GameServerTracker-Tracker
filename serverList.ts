@@ -13,14 +13,9 @@ const serverList: IServer[] = [
         address: "mc.hypixel.net"
     },
     {
-        name: "VLife",
-        type: ServerType.Source,
-        address: "192.168.1.237:27015"
-    },
-    {
-        name: "GTA RP",
-        type: ServerType.FiveM,
-        address: "address.com"
+        name: "Minemen",
+        type: ServerType.Minecraft,
+        address: "eu.minemen.club"
     }
 ]
 

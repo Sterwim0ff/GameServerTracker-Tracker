@@ -12,8 +12,10 @@
   "dependencies": {
     "@fabricio-191/valve-server-query": "^4.1.7",
     "axios": "^1.2.1",
+    "docker-compose": "^0.23.19",
     "dotenv": "^16.0.3",
     "minecraft-server-ping": "^0.0.8",
+    "mysql": "^2.18.1",
     "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.3.11"

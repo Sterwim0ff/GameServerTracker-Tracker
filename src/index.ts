@@ -3,23 +3,20 @@ import { AppDataSource } from "./Database";
 import { ServerData } from "./ServerData";
 import { actionTrackDict } from "./track";
 
-const main = async () => {
+const main = async (connection: any) => {
   const result: any[] = [];
 
   try {
-    const connection = await AppDataSource.initialize();
     for (const element of serverList) {
       const tmp = await actionTrackDict[element.type](element.address);
-      result.push(
-        {
-          name: element.name,
-          address: element.address,
-          type: element.type,
-          playersOnline: tmp.playersOnline,
-          playersMax: tmp.playersMax,
-          timestamp: Date.now()
-        }
-      );
+      result.push({
+        name: element.name,
+        address: element.address,
+        type: element.type,
+        playersOnline: tmp.playersOnline,
+        playersMax: tmp.playersMax,
+        timestamp: Date.now(),
+      });
       const serverData: ServerData = new ServerData();
       serverData.name = element.name;
       serverData.address = element.address;
@@ -30,7 +27,20 @@ const main = async () => {
     }
     console.log(`Track done for ${ServerData.name}`);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
-main();
+};
+
+const loop = setInterval(async () => {
+  let connection;
+  try {
+    connection = await AppDataSource.initialize();
+    await main(connection);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection) {
+      await connection.close();
+    }
+  }
+}, 60000);
