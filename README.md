@@ -102,4 +102,5 @@ $ pm2 start dist/src/index.js --name GameServerTracker
 
 ## Credit
 
-- Author - [BliTz_37 - A guy from Tek](https://github.com/BliTz037/) Modified by Sterwim
+- Author - [BliTz_37 - A guy from Tek](https://github.com/BliTz037/) 
+Modified by Sterwim
