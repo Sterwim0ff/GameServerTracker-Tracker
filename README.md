@@ -1,4 +1,4 @@
-# GameServerTracker-Tracker
+# GameServerTracker-Tracker Modified by Sterwim
 
 <p align="center">A tracker to monitor the number of players connected to Minecraft / Source (Gmod, CS, CSGO) / FiveM servers</p>
 
