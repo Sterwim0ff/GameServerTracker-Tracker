@@ -2,6 +2,8 @@
 
 <p align="center">A tracker to monitor the number of players connected to Minecraft / Source (Gmod, CS, CSGO) / FiveM servers</p>
 
+![alt text](https://cdn.discordapp.com/attachments/1076176691170394113/1081905800622129213/image.png)
+
 ## Description
 
 This TypeScript script retrieves the number of players connected to a game server specified in the configuration file. The results are stored in a PostgreSQL database and displayed on a Grafana dashboard.
