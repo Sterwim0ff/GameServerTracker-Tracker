@@ -21,6 +21,7 @@ This API was inspired by the Lametric Clock app project : [GameServerTracker-Lam
 - Docker & Docker-compose
 - NodeJS
 - Pm2 JOB or Screen (recommended)
+- Database MySQL or MariaDB or PostgreSQL
 
 ### Setup
 
@@ -38,15 +39,15 @@ $ yarn install
 ```
 
 #### Setup .env
-- You will need a MySQL or MariaDB database 
 
 The environement variable required
 
 ```env
-MYSQL_HOST=localhost
-MYSQL_USER=root
-MYSQL_PASSWORD=root
-MYSQL_DB=server
+DB_TYPE=mysql # mysql (for mysql or mariadb) / postgres available
+DB_HOST=localhost # the endpoint of the database
+DB_USER=root # the user of the database
+DB_PASSWORD=Passwd # the password of the database
+DB_DB=root # the name of the database
 
 #LOGIN FOR GRAFANA
 GF_SECURITY_ADMIN_USER=admin
@@ -77,7 +78,7 @@ const serverList: IServer[] = [
 
 ## Running
 
-#### Running Grafana & Database
+#### Running Grafana
 
 ```bash
 $ docker-compose up
